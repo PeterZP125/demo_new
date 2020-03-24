@@ -27,10 +27,27 @@ public class PmsProductInfo implements Serializable {
     private  String catalog3Id;
 
     @Transient
-    private List<PmsProductSaleAttr> pmsProductSaleAttrList;
-    @Transient
-    private List<PmsProductImage> pmsProductImageList;
+    private List<PmsProductSaleAttr> spuSaleAttrList;
 
+    @Transient
+    private List<PmsProductImage> spuImageList;
+
+
+    public List<PmsProductSaleAttr> getSpuSaleAttrList() {
+        return spuSaleAttrList;
+    }
+
+    public void setSpuSaleAttrList(List<PmsProductSaleAttr> spuSaleAttrList) {
+        this.spuSaleAttrList = spuSaleAttrList;
+    }
+
+    public List<PmsProductImage> getSpuImageList() {
+        return spuImageList;
+    }
+
+    public void setSpuImageList(List<PmsProductImage> spuImageList) {
+        this.spuImageList = spuImageList;
+    }
 
     public String getProductName() {
         return productName;
@@ -40,23 +57,6 @@ public class PmsProductInfo implements Serializable {
         this.productName = productName;
     }
 
-    public List<PmsProductSaleAttr> getPmsProductSaleAttrList() {
-        return pmsProductSaleAttrList;
-    }
-
-    public void setPmsProductSaleAttrList(List<PmsProductSaleAttr> pmsProductSaleAttrList) {
-        this.pmsProductSaleAttrList = pmsProductSaleAttrList;
-    }
-
-    public List<PmsProductImage> getPmsProductImageList() {
-        return pmsProductImageList;
-    }
-
-    public void setPmsProductImageList(List<PmsProductImage> pmsProductImageList) {
-        this.pmsProductImageList = pmsProductImageList;
-    }
-
-
     public String getId() {
         return id;
     }
@@ -64,7 +64,6 @@ public class PmsProductInfo implements Serializable {
     public void setId(String id) {
         this.id = id;
     }
-
 
     public String getDescription() {
         return description;
@@ -81,7 +80,6 @@ public class PmsProductInfo implements Serializable {
     public void setCatalog3Id(String catalog3Id) {
         this.catalog3Id = catalog3Id;
     }
-
 }
 
 

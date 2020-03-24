@@ -9,11 +9,10 @@
         <relativePath></relativePath>
     </parent>
     <groupId>com.peter.mall</groupId>
-    <artifactId>mall-user-service</artifactId>
+    <artifactId>mall-manage-service</artifactId>
     <version>1.0.0</version>
-    <name>mall-user-service</name>
+    <name>mall-manage-service</name>
     <description>Demo project for Spring Boot</description>
-
 
     <dependencies>
         <dependency>
@@ -28,6 +27,7 @@
             <version>1.0.0</version>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>

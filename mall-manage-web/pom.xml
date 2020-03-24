@@ -9,11 +9,10 @@
         <relativePath></relativePath>
     </parent>
     <groupId>com.peter.mall</groupId>
-    <artifactId>mall-user-service</artifactId>
+    <artifactId>mall-manage-web</artifactId>
     <version>1.0.0</version>
-    <name>mall-user-service</name>
+    <name>mall-manage-web</name>
     <description>Demo project for Spring Boot</description>
-
 
     <dependencies>
         <dependency>
@@ -24,10 +23,15 @@
         </dependency>
         <dependency>
             <groupId>com.peter.mall</groupId>
-            <artifactId>mall-service-util</artifactId>
+            <artifactId>mall-web-util</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.csource</groupId>
+            <artifactId>fastdfs-client-java</artifactId>
+        </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
