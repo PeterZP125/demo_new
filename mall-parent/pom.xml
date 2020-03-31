@@ -28,11 +28,15 @@
         <starter-mybatis>2.1.1</starter-mybatis>
         <httpclient.version>4.5.5</httpclient.version>
         <commons-lang3.version>3.7</commons-lang3.version>
+        <beanUtils.version>1.9.3</beanUtils.version>
         <jedis.version>2.9.0</jedis.version>
         <jest.version>5.3.3</jest.version>
         <jna.version>4.5.1</jna.version>
         <beanUtils.version>1.9.3</beanUtils.version>
         <fastdfs.client.version>1.27-SNAPSHOT</fastdfs.client.version>
+        <nekohtml.version>1.9.20</nekohtml.version>
+        <xml-apis.version>1.4.01</xml-apis.version>
+        <batik-ext.version>1.9.1</batik-ext.version>
     </properties>
 
     <dependencyManagement>
@@ -87,7 +91,6 @@
                 <artifactId>jedis</artifactId>
                 <version>${jedis.version}</version>
             </dependency>
-
             <!-- https://mvnrepository.com/artifact/io.searchbox/jest -->
             <dependency>
                 <groupId>io.searchbox</groupId>
@@ -111,6 +114,22 @@
                 <groupId>org.csource</groupId>
                 <artifactId>fastdfs-client-java</artifactId>
                 <version>${fastdfs.client.version}</version>
+            </dependency>
+            <!--thymeleaf-->
+            <dependency>
+                <groupId>net.sourceforge.nekohtml</groupId>
+                <artifactId>nekohtml</artifactId>
+                <version>${nekohtml.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xml-apis</groupId>
+                <artifactId>xml-apis</artifactId>
+                <version>${xml-apis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-ext</artifactId>
+                <version>${batik-ext.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -19,6 +19,9 @@ public class PmsSkuInfo implements Serializable {
     @Column
     String productId;
 
+    @Transient
+    String spuId;
+
     @Column
     BigDecimal price;
 
@@ -38,15 +41,37 @@ public class PmsSkuInfo implements Serializable {
     String skuDefaultImg;
 
     @Transient
-    List<PmsSkuImage> pmsSkuImageList;
+    List<PmsSkuImage> skuImageList;
 
     @Transient
-    List<PmsSkuAttrValue> pmsSkuAttrValueList;
+    List<PmsSkuAttrValue> skuAttrValueList;
 
     @Transient
-    List<PmsSkuSaleAttrValue> pmsSkuSaleAttrValueList;
+    List<PmsSkuSaleAttrValue> skuSaleAttrValueList;
 
+    public List<PmsSkuImage> getSkuImageList() {
+        return skuImageList;
+    }
 
+    public void setSkuImageList(List<PmsSkuImage> skuImageList) {
+        this.skuImageList = skuImageList;
+    }
+
+    public List<PmsSkuAttrValue> getSkuAttrValueList() {
+        return skuAttrValueList;
+    }
+
+    public void setSkuAttrValueList(List<PmsSkuAttrValue> skuAttrValueList) {
+        this.skuAttrValueList = skuAttrValueList;
+    }
+
+    public List<PmsSkuSaleAttrValue> getSkuSaleAttrValueList() {
+        return skuSaleAttrValueList;
+    }
+
+    public void setSkuSaleAttrValueList(List<PmsSkuSaleAttrValue> skuSaleAttrValueList) {
+        this.skuSaleAttrValueList = skuSaleAttrValueList;
+    }
 
     public String getId() {
         return id;
@@ -112,27 +137,12 @@ public class PmsSkuInfo implements Serializable {
         this.productId = productId;
     }
 
-    public List<PmsSkuImage> getPmsSkuImageList() {
-        return pmsSkuImageList;
+    public String getSpuId() {
+        return spuId;
     }
 
-    public void setPmsSkuImageList(List<PmsSkuImage> pmsSkuImageList) {
-        this.pmsSkuImageList = pmsSkuImageList;
+    public void setSpuId(String spuId) {
+        this.spuId = spuId;
     }
 
-    public List<PmsSkuAttrValue> getPmsSkuAttrValueList() {
-        return pmsSkuAttrValueList;
-    }
-
-    public void setPmsSkuAttrValueList(List<PmsSkuAttrValue> pmsSkuAttrValueList) {
-        this.pmsSkuAttrValueList = pmsSkuAttrValueList;
-    }
-
-    public List<PmsSkuSaleAttrValue> getPmsSkuSaleAttrValueList() {
-        return pmsSkuSaleAttrValueList;
-    }
-
-    public void setPmsSkuSaleAttrValueList(List<PmsSkuSaleAttrValue> pmsSkuSaleAttrValueList) {
-        this.pmsSkuSaleAttrValueList = pmsSkuSaleAttrValueList;
-    }
 }

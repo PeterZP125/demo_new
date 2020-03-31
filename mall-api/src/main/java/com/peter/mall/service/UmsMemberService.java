@@ -5,6 +5,6 @@ import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
 
-public interface UmsMemberService{
+public interface UmsMemberService {
     List<UmsMember> getUmsMemberById(String id);
 }

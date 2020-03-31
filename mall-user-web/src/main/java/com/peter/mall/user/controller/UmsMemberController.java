@@ -15,7 +15,7 @@ public class UmsMemberController {
     UmsMemberService umsMemberService;
 
     @RequestMapping("/getUmsMemberById")
-    public List<UmsMember> getUmsMemberById(@RequestParam("id") String id){
+    public List<UmsMember> getUmsMemberById(@RequestParam("id") String id) {
         return umsMemberService.getUmsMemberById(id);
     }
 }

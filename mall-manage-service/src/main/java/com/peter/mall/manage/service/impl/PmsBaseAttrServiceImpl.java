@@ -25,6 +25,12 @@ public class PmsBaseAttrServiceImpl implements PmsBaseAttrService {
         PmsBaseAttrInfo pmsBaseAttrInfo = new PmsBaseAttrInfo();
         pmsBaseAttrInfo.setCatalog3Id(catalog3Id);
         List<PmsBaseAttrInfo> pmsBaseAttrInfoList = pmsBaseAttrInfoMapper.select(pmsBaseAttrInfo);
+        for (PmsBaseAttrInfo baseAttrInfo : pmsBaseAttrInfoList) {
+            PmsBaseAttrValue pmsBaseAttrValue = new PmsBaseAttrValue();
+            pmsBaseAttrValue.setAttrId(baseAttrInfo.getId());
+            List<PmsBaseAttrValue> pmsBaseAttrValues = pmsBaseAttrValueMapper.select(pmsBaseAttrValue);
+            baseAttrInfo.setAttrValueList(pmsBaseAttrValues);
+        }
         return pmsBaseAttrInfoList;
     }
 
@@ -43,7 +49,7 @@ public class PmsBaseAttrServiceImpl implements PmsBaseAttrService {
             //修改操作
             //修改PmsBaseAttrInfo
             Example example = new Example(PmsBaseAttrInfo.class);
-            example.createCriteria().andEqualTo("id",pmsBaseAttrInfo.getId());
+            example.createCriteria().andEqualTo("id", pmsBaseAttrInfo.getId());
             pmsBaseAttrInfoMapper.updateByExampleSelective(pmsBaseAttrInfo, example);
             //删除原来的PmsBaseAttrValue
             PmsBaseAttrValue pmsBaseAttrValue = new PmsBaseAttrValue();
