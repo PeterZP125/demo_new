@@ -15,3 +15,7 @@
 guava的包冲突就是个坑
 #mall-search-web
 8030
+#mall-cart-service
+8041
+#mall-cart-web
+8040

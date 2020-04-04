@@ -6,10 +6,12 @@ import com.peter.mall.beans.PmsBaseAttrValue;
 import com.peter.mall.manage.mapper.PmsBaseAttrInfoMapper;
 import com.peter.mall.manage.mapper.PmsBaseAttrValueMapper;
 import com.peter.mall.service.PmsBaseAttrService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class PmsBaseAttrServiceImpl implements PmsBaseAttrService {
@@ -70,6 +72,13 @@ public class PmsBaseAttrServiceImpl implements PmsBaseAttrService {
         pmsBaseAttrValue.setAttrId(attrId);
         List<PmsBaseAttrValue> pmsBaseAttrValues = pmsBaseAttrValueMapper.select(pmsBaseAttrValue);
         return pmsBaseAttrValues;
+    }
+
+    @Override
+    public List<PmsBaseAttrInfo> getPmsBaseAttrInfoByBaseAttrValueId(Set<String> valueIdSet) {
+        String valueIdStr = StringUtils.join(valueIdSet, ",");
+        List<PmsBaseAttrInfo> pmsBaseAttrInfoList = pmsBaseAttrInfoMapper.selectPmsBaseAttrInfoByBaseAttrValueId(valueIdStr);
+        return pmsBaseAttrInfoList;
     }
 
 }

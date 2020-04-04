@@ -1,10 +1,11 @@
 package com.peter.mall.beans;
 
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
-public class PmsSearchSkuInfo {
+public class PmsSearchSkuInfo implements Serializable {
     @Id
     private Long id;
     private String skuName;
@@ -12,8 +13,8 @@ public class PmsSearchSkuInfo {
     private String skuDefaultImg;
     private String skuDesc;
     private Double hotScore;
-    private Long catalog3Id;
-    private Long productId;
+    private String catalog3Id;
+    private String productId;
     List<PmsSkuAttrValue> skuAttrValueList;
 
     public Long getId() {
@@ -22,6 +23,22 @@ public class PmsSearchSkuInfo {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCatalog3Id() {
+        return catalog3Id;
+    }
+
+    public void setCatalog3Id(String catalog3Id) {
+        this.catalog3Id = catalog3Id;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
     public String getSkuName() {
@@ -64,21 +81,6 @@ public class PmsSearchSkuInfo {
         this.hotScore = hotScore;
     }
 
-    public Long getCatalog3Id() {
-        return catalog3Id;
-    }
-
-    public void setCatalog3Id(Long catalog3Id) {
-        this.catalog3Id = catalog3Id;
-    }
-
-    public Long getProductId() {
-        return productId;
-    }
-
-    public void setProductId(Long productId) {
-        this.productId = productId;
-    }
 
     public List<PmsSkuAttrValue> getSkuAttrValueList() {
         return skuAttrValueList;
