@@ -19,3 +19,9 @@ guava的包冲突就是个坑
 8041
 #mall-cart-web
 8040
+#mall-passport-web
+8070
+#mall-order-service
+8061
+#mall-order-web
+8060

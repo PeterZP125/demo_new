@@ -1,6 +1,7 @@
 package com.peter.mall.search.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.peter.mall.annotations.RequiredLoginAnno;
 import com.peter.mall.beans.*;
 import com.peter.mall.query.SkuInfoQueryParam;
 import com.peter.mall.service.PmsBaseAttrService;
@@ -98,6 +99,7 @@ public class SearchController {
     }
 
     @RequestMapping("index")
+    @RequiredLoginAnno(loginSuccess = false)
     public String index() {
         return "index";
     }
