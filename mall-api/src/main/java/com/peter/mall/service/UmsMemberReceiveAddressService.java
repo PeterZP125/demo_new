@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface UmsMemberReceiveAddressService {
     List<UmsMemberReceiveAddress> getUmsMemberReceiveAddressByMemberId(String memberId);
+
+    UmsMemberReceiveAddress getReceiveAddressById(String receiveAddressId);
 }

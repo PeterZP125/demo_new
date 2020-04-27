@@ -1,4 +1,4 @@
-package com.peter.mall.order;
+package com.peter.mall;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

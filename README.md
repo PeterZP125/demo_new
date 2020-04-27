@@ -25,3 +25,5 @@ guava的包冲突就是个坑
 8061
 #mall-order-web
 8060
+#mall-payment
+8080
